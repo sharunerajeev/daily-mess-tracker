@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 
-export default function HomePage() {
+export default function PollPage() {
   return (
     <View
       style={{
@@ -9,7 +9,7 @@ export default function HomePage() {
         alignItems: "center",
       }}
     >
-      <Text>Home Page</Text>
+      <Text>Poll Page</Text>
     </View>
   );
 }
