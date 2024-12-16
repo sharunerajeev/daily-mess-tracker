@@ -1,33 +1,62 @@
 import { Tabs } from "expo-router";
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
-export default function RootLayout() {
+export default function Layout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          height: 70,
+          paddingBottom: 10,
+          paddingTop: 10,
+          borderTopWidth: 0.5,
+        },
+      }}
+    >
+      {/* Home Tab */}
       <Tabs.Screen
-        name="home"
+        name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <MaterialIcons name="home-filled" size={24} color="black" />,
-        }}></Tabs.Screen>
+          title: "Home",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="home-filled" color={color} size={size} />
+          ),
+        }}
+      />
+
+      {/* Poll Tab */}
       <Tabs.Screen
-        name="poll"
+        name="poll/index"
         options={{
-          title: 'Poll',
-          tabBarIcon: ({ color }) => <MaterialIcons name="home-filled" size={24} color="black" />,
-        }}></Tabs.Screen>
+          title: "Poll",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="poll" color={color} size={size} />
+          ),
+        }}
+      />
+
+      {/* Expense Tab */}
       <Tabs.Screen
-        name="expense"
+        name="expense/index"
         options={{
-          title: 'Expense',
-          tabBarIcon: ({ color }) => <MaterialIcons name="home-filled" size={24} color="black" />,
-        }}></Tabs.Screen>
+          title: "Expense",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="wallet" color={color} size={size} />
+          ),
+        }}
+      />
+
+      {/* Profile Tab */}
       <Tabs.Screen
-        name="profile"
+        name="profile/index"
         options={{
-          title: 'Profile',
-          tabBarIcon: ({ color }) => <MaterialIcons name="home-filled" size={24} color="black" />,
-        }}></Tabs.Screen>
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="account-circle" color={color} size={size} />
+          ),
+        }}
+      />
     </Tabs>
-  )
+  );
 }
