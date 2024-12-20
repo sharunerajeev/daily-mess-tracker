@@ -1,50 +1,149 @@
-# Welcome to your Expo app 👋
+# Daily Meal Tracker
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An intuitive cross-platform mobile application designed to help users track daily meals and manage expenses for a mess. Built using React Native with Expo, Firebase for authentication and backend, and a structured modern design system. The app supports Android, iOS, and web platforms.
 
-## Get started
+---
 
-1. Install dependencies
+## Features
+- **User Authentication**: Login and registration functionality using Firebase.
+- **Daily Polls**: Users can select meal preferences for morning, afternoon, and night with a multi-select poll.
+- **Expense Tracking**: View the total expense and a detailed history of daily expenses.
+- **User Profile**: Manage and view personal details.
+- **Notification System**: Get notified about updates or reminders.
+- **Cross-Platform**: Supports Android, iOS, and web platforms with seamless functionality.
 
+---
+
+## Screenshots
+(Add screenshots of the app here for better visualization.)
+
+---
+
+## Tech Stack
+- **Frontend**: React Native with Expo Router
+- **Backend**: Firebase (Authentication and Database)
+- **Styling**: React Native StyleSheet
+- **Navigation**: Expo Router with Tab Navigation
+- **Deployment**: Expo EAS for Android, iOS, and Web
+
+---
+
+## Getting Started
+
+### Prerequisites
+1. Install [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/).
+2. Install [Expo CLI](https://docs.expo.dev/get-started/installation/):
+   ```bash
+   npm install -g expo-cli
+   ```
+3. Install [EAS CLI](https://expo.dev/eas):
+   ```bash
+   npm install -g eas-cli
+   ```
+4. Create a Firebase project and download the configuration files:
+   - `google-services.json` for Android
+   - `GoogleService-Info.plist` for iOS
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/daily-meal-tracker.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd daily-meal-tracker
+   ```
+3. Install dependencies:
    ```bash
    npm install
    ```
+4. Add Firebase configuration files:
+   - Place `google-services.json` in `android/app/`.
+   - Place `GoogleService-Info.plist` in the `ios/` folder.
+   - Update `app.json` with:
+     ```json
+     {
+       "expo": {
+         "android": {
+           "googleServicesFile": "./android/app/google-services.json"
+         },
+         "ios": {
+           "googleServicesFile": "./ios/GoogleService-Info.plist"
+         }
+       }
+     }
+     ```
 
-2. Start the app
-
+### Running the Application
+1. Start the development server:
    ```bash
-    npx expo start
+   expo start
    ```
+2. For Android:
+   ```bash
+   eas build --platform android
+   ```
+3. For iOS:
+   ```bash
+   eas build --platform ios
+   ```
+4. Open the app in your Expo Go app or install the built files on your device.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## Project Structure
+```
+app/
+├── auth/               # Login and Register screens
+├── (tabs)/             # Bottom tab navigation screens (Home, Poll, Expense, Profile)
+├── components/         # Shared UI components
+├── firebase/           # Firebase configuration and helper functions
+├── assets/             # Images, icons, and static assets                  # Main entry point of the app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## Contribution Guide
 
-To learn more about developing your project with Expo, look at the following resources:
+We welcome contributions to enhance this project! Here's how you can get involved:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Bug Reports & Feature Requests
+- Open an issue on the GitHub repository with detailed information.
 
-## Join the community
+### Pull Requests
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to your fork:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request against the main repository.
 
-Join our community of developers creating universal apps.
+### Areas for Contribution
+- **UI/UX Improvements**: Enhance the design or add animations.
+- **Features**: Add new features, such as advanced expense analytics.
+- **Bug Fixes**: Solve issues or improve app performance.
+- **Localization**: Add support for multiple languages.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+For any queries, feel free to contact:
+- Email: sharunpublic@gmail.com
+- GitHub: [sharunerajeev](https://github.com/sharunerajeev)
+
+---
+
+Happy coding! 🚀

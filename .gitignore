@@ -36,3 +36,9 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# To be removed later
+android
+Notes.txt
+firebase/*.json
+firebase/*.plist
